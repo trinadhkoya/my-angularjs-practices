@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Introduction to JSON in Angular JS|</title>
+	<script type="text/javascript" src="../lib/angular.js"></script>
+	<script type="text/javascript" src="../js/twowaydatabindingjsondisplay.js"></script>
+</head>
+<body ng-app="gitusersdemo">
+
+	<div ng-controller="GitUserController">
+		<table border="2" style="width:auto;">
+
+			<tr>
+				<td><strong>Id</strong></td>
+				<td><strong>Gravatar Id</strong></td>
+				<td><strong>USER NAME</strong></td>
+				<td><strong>Profile Pic</strong></td>
+				<td><strong>URL</strong></td>
+				<td><strong>TYPE</strong></td>
+				<td><strong>SITE ADMIN?</strong></td>
+			</tr>
+
+			<tr ng-repeat="gituser in gitdataset">
+				<td>{{gituser.id}}</td>
+				<td>{{gituser.gravatar_id}}</td>
+				<td>{{gituser.login}}</td>
+				<td>{{gituser.avatar_url}}</td>
+				<td>{{gituser.url}}</td>
+				<td>{{gituser.type}}</td>
+				<td>{{gituser.site_admin}}</td>
+			</tr>
+
+			<tr>
+
+
+			</table>
+
+			<!--in this we are passing the JSON URL in to the function ,from controller we can fetch the data on click of Submit Button-->
+			<input type="button" value="Load" name="loadData" ng-click="updateModel('GET','https://raw.githubusercontent.com/trinadhkoya/MyShortNotes/master/dummyjson')" >
+
+
+
+
+
+		</div>
+
+	</body>
+	</html>
