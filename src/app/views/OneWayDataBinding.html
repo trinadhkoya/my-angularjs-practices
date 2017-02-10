@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html ng-app>
+<head>
+	<meta charset="utf-8">
+	<title>How One Way Data binding Works</title>
+	<!--script file of angular ,you can include the CDN url also"-->
+	<script type="text/javascript" src="../lib/angular.js"></script>
+
+</head>
+<body>
+<!-- We initialize a couple of variables firstName and lastName through the ng-init directive.
+ -->
+<div ng-init="firstName='Trinadh';lastName='Koya';">
+<!--using expressions we can do like this -->
+<strong>First Name:</strong>{{firstName}}<br>
+<!--using (bind(directive)) we can hold the data-->
+<strong>Last Name:</strong><span ng-bind="lastName"></span>
+
+	
+</div>
+
+</body>
+</html>

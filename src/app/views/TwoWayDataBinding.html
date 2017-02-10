@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html ng-app>
+<head>
+	<title>How TwoWay Data Binding Works</title>
+	<script type="text/javascript" src="../lib/angular.js"></script>
+</head>
+<body>
+
+<!--for data entering -->
+<div>
+	<label>FirstName:<input type="text" name="fname" ng-model="firstName" minlength="3" 
+	 maxlength="15"  required=""></label><br>
+	<label>LastName:<input type="text" name="lname" ng-model="lastName" marequired="" minlength="3" maxlength="15"></label><br>
+	<label>  Email:<input type="Email" name="email" ng-model="eMail" required=""></label><br>
+
+</div>
+<!--for data display-->
+<div>
+	<strong>Firsname is</strong>
+	<span style="color: black">
+	<span ng-bind="firstName">
+		
+	</span><br>
+	<strong>Last Name is</strong>
+	<span ng-bind="lastName"></span>
+	</span><br>
+	<strong>Email is </strong>
+	<span>{{eMail}}</span>
+
+</div>
+
+
+</body>
+</html>
