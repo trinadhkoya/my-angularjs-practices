@@ -1,0 +1,26 @@
+	<!DOCTYPE html>
+	<html ng-app="app">
+	<head>
+		<meta charset="utf-8">
+		<title>How to work with Multiple Controllers|Angular JS</title>
+		<script type="text/javascript" src="../lib/Angular.js"></script>
+		<script type="text/javascript" src="../js/multiplcontroller.js"></script>
+	</head>
+	<body >
+		<div ng-controller="Controller1 as ctrl1">
+			<span>{{text_in_controller1}}</span>
+		</div>
+		<div ng-controller="Controller2 as ctrl2">
+			<span>{{text_in_controller2}}</span>
+		</div>
+		<div ng-controller="Controller3 as ctrl3">
+			Email:<input type="text" name="Email" ng-model='email' required="">
+			<button ng-click="addContact()">Add Contact</button>
+			<h2>List of Contacts</h2>
+			<ol>
+			<li ng-repeat="contact in contacts">{{contact}}</li>
+			</ol>
+		</div>
+
+	</body>
+	</html>

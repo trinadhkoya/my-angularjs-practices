@@ -38,11 +38,11 @@
 			console.log(method);
 			console.log(url);
 			$http({
-			method:$scope.method,
-			url:$scope.url
+				method:$scope.method,
+				url:$scope.url
 
 
-		}).then(function successCallback(response){
+			}).then(function successCallback(response){
 			//success message 
 			console.log(response.data);
 			console.log(response.status);
